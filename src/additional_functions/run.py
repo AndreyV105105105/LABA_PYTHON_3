@@ -2,6 +2,7 @@ from src.fact_fibo.factorial import factorial
 from src.fact_fibo.factorial_recursive import factorial_recursive
 from src.fact_fibo.fibo import fibo
 from src.fact_fibo.fibo_recursive import fibo_recursive
+from src.stack.stack_menu import stack_menu
 
 
 def run():
@@ -15,6 +16,8 @@ def run():
                     answer = func_dict[user_message](user_number)
                     print(answer)
 
+                elif user_message == '11':
+                    stack_menu()
                 elif user_message == 'exit':
                     break
             except KeyboardInterrupt:
