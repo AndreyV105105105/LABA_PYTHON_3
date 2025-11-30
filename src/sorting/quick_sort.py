@@ -1,7 +1,8 @@
 def quick_sort(arr):
+    arr = list(map(int, arr))
     # Массивы из 0 или 1 элемента уже отсортированы
     if len(arr) <= 1:
-        return arr
+        return list(map(str, arr))
 
     # Выбираем опорный элемент - средний элемент массива
     support_el = arr[len(arr) // 2]
@@ -15,4 +16,4 @@ def quick_sort(arr):
     right = [x for x in arr if x > support_el]
 
     # Рекурсивно сортируем левую и правую части, объединяем с серединой
-    return quick_sort(left) + middle + quick_sort(right)
+    return list(map(str, quick_sort(left) + middle + quick_sort(right)))

@@ -1,4 +1,5 @@
 def bubble_sort(arr):
+    arr = list(map(int, arr))
     # Флаг: были ли обмены на этом проходе
     f = True
 
@@ -13,4 +14,4 @@ def bubble_sort(arr):
 
         # Если обменов не было - массив отсортирован
         if not f:
-            return arr
+            return list(map(str, arr))

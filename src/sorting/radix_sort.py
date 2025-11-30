@@ -1,4 +1,5 @@
 def radix_sort(arr, base=10):
+    arr = list(map(int, arr))
     # Если пустой массив, возвращаем пустой
     if len(arr) == 0:
         return []
@@ -23,9 +24,9 @@ def radix_sort(arr, base=10):
         arr = []
         for bucket in buckets:
             for el in bucket:
-                arr.append(str(el))
+                arr.append(el)
 
         # Очищаем корзины для следующего разряда
         buckets = [[] for i in range(base)]
 
-    return arr
+    return list(map(str, arr))
